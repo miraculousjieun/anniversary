@@ -1,610 +1,242 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width,initial-scale=1">
-
-<title>
-Sweet 28, my angel.
-</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sweet 28, my angel.</title>
 
 <style>
-
 *{
-box-sizing:border-box;
-font-family:"Trebuchet MS",sans-serif;
+  box-sizing:border-box;
+  font-family:"Trebuchet MS",sans-serif;
 }
 
 body{
-
-margin:0;
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-padding:20px;
-
-background:
-
-linear-gradient(
-135deg,
-#F7CAC9,
-#F5EBF1,
-#91A8D0
-);
-
+  margin:0;
+  min-height:100vh;
+  padding:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#F7CAC9,#F6EEF3,#91A8D0);
 }
 
 .card{
-
-width:900px;
-
-max-width:95%;
-
-padding:55px 35px;
-
-background:
-
-rgba(
-255,
-255,
-255,
-0.58
-);
-
-backdrop-filter:
-
-blur(15px);
-
-border:
-
-2px solid
-rgba(
-255,
-255,
-255,
-0.7
-);
-
-border-radius:42px;
-
-box-shadow:
-
-0 18px 45px
-rgba(
-145,
-168,
-208,
-0.22
-);
-
-text-align:center;
-
+  width:900px;
+  max-width:95%;
+  padding:50px 35px;
+  text-align:center;
+  border-radius:42px;
+  background:rgba(255,255,255,.58);
+  backdrop-filter:blur(15px);
+  border:2px solid rgba(255,255,255,.7);
+  box-shadow:0 18px 45px rgba(145,168,208,.22);
 }
 
 h1{
-
-margin:0 0 35px;
-
-font-size:44px;
-
-font-weight:500;
-
-white-space:nowrap;
-
-color:#5F82B4;
-
+  margin:0 0 25px;
+  font-size:44px;
+  font-weight:500;
+  color:#5F82B4;
+  white-space:nowrap;
 }
 
 button{
-
-border:none;
-
-padding:
-
-16px 42px;
-
-border-radius:40px;
-
-font-size:18px;
-
-cursor:pointer;
-
-color:white;
-
-background:
-
-linear-gradient(
-135deg,
-#F7CAC9,
-#91A8D0
-);
-
-box-shadow:
-
-0 8px 22px
-rgba(
-145,
-168,
-208,
-0.25
-);
-
+  border:none;
+  padding:16px 42px;
+  border-radius:40px;
+  font-size:18px;
+  cursor:pointer;
+  color:white;
+  background:linear-gradient(135deg,#F7CAC9,#91A8D0);
+  box-shadow:0 8px 22px rgba(145,168,208,.25);
 }
 
 .hidden{
-
-display:none;
-
+  display:none;
 }
 
 .cake-wrap{
-
-display:flex;
-
-justify-content:center;
-
+  display:flex;
+  justify-content:center;
 }
 
 svg{
-
-width:520px;
-
-max-width:100%;
-
-display:block;
-
+  width:540px;
+  max-width:100%;
+  display:block;
 }
 
 .flame{
+  animation:glow .8s infinite alternate;
+}
 
-animation:
-
-fire .25s
-infinite alternate;
-
-transform-origin:center;
-
+@keyframes glow{
+  from{ opacity:.78; }
+  to{ opacity:1; }
 }
 
 .off .flame{
-
-display:none;
-
-}
-
-@keyframes fire{
-
-from{
-
-transform:
-scale(1);
-
-}
-
-to{
-
-transform:
-scale(1.12)
-rotate(-3deg);
-
-}
-
+  display:none;
 }
 
 #etat{
-
-font-size:18px;
-
-margin:20px 0;
-
-color:#5F82B4;
-
+  font-size:18px;
+  margin:18px 0;
+  color:#5F82B4;
 }
 
 iframe{
-
-display:none;
-
+  display:none;
 }
-
 </style>
-
 </head>
 
 <body>
 
 <div class="card">
 
-<div id="depart">
+  <div id="depart">
+    <h1>Sweet 28, my angel.</h1>
+    <button onclick="commencer()">for you</button>
+  </div>
 
-<h1>
+  <div id="anniv" class="hidden">
+    <h1>Sweet 28, my angel.</h1>
 
-Sweet 28, my angel.
+    <div class="cake-wrap">
+      <svg id="cake" viewBox="0 0 540 430">
 
-</h1>
+        <!-- bougies -->
+        <rect x="197" y="70" width="18" height="78" rx="9" fill="#F7CAC9"/>
+        <path class="flame" d="M206 33 C190 58 197 77 206 77 C215 77 222 58 206 33Z" fill="#FFD76B"/>
+        <path class="flame" d="M206 51 C200 62 203 70 206 70 C209 70 212 62 206 51Z" fill="#FFF8D8"/>
 
-<button
-onclick="commencer()">
+        <rect x="261" y="70" width="18" height="78" rx="9" fill="#91A8D0"/>
+        <path class="flame" d="M270 33 C254 58 261 77 270 77 C279 77 286 58 270 33Z" fill="#FFD76B"/>
+        <path class="flame" d="M270 51 C264 62 267 70 270 70 C273 70 276 62 270 51Z" fill="#FFF8D8"/>
 
-for you
+        <rect x="325" y="70" width="18" height="78" rx="9" fill="#F7CAC9"/>
+        <path class="flame" d="M334 33 C318 58 325 77 334 77 C343 77 350 58 334 33Z" fill="#FFD76B"/>
+        <path class="flame" d="M334 51 C328 62 331 70 334 70 C337 70 340 62 334 51Z" fill="#FFF8D8"/>
 
-</button>
+        <!-- étage haut : dessus -->
+        <ellipse cx="270" cy="165" rx="130" ry="42"
+          fill="#FFF9F8" stroke="#B8C9E9" stroke-width="4"/>
 
-</div>
+        <!-- étage haut : face -->
+        <path d="M140 165
+                 L140 250
+                 Q140 278 168 278
+                 H372
+                 Q400 278 400 250
+                 L400 165"
+          fill="#FFF9F8" stroke="#B8C9E9" stroke-width="4"/>
 
-<div
-id="anniv"
-class="hidden">
+        <!-- déco haut -->
+        <path d="M155 218
+                 Q178 248 205 218
+                 Q232 248 260 218
+                 Q288 248 315 218
+                 Q342 248 385 218"
+          fill="none" stroke="#91A8D0" stroke-width="3"/>
 
-<h1>
+        <circle cx="155" cy="218" r="7" fill="#F7CAC9"/>
+        <circle cx="205" cy="218" r="7" fill="#91A8D0"/>
+        <circle cx="260" cy="218" r="7" fill="#F7CAC9"/>
+        <circle cx="315" cy="218" r="7" fill="#91A8D0"/>
+        <circle cx="385" cy="218" r="7" fill="#F7CAC9"/>
 
-Sweet 28, my angel.
+        <!-- étage bas : dessus -->
+        <ellipse cx="270" cy="290" rx="190" ry="58"
+          fill="#FFF9F8" stroke="#F3B4CA" stroke-width="4"/>
 
-</h1>
+        <!-- étage bas : face -->
+        <path d="M80 290
+                 L80 365
+                 Q80 405 120 405
+                 H420
+                 Q460 405 460 365
+                 L460 290"
+          fill="#FFF9F8" stroke="#F3B4CA" stroke-width="4"/>
 
-<div class="cake-wrap">
+        <!-- déco bas -->
+        <path d="M100 340
+                 Q128 378 160 340
+                 Q192 378 225 340
+                 Q257 378 290 340
+                 Q322 378 355 340
+                 Q388 378 440 340"
+          fill="none" stroke="#91A8D0" stroke-width="3"/>
 
-<svg
-id="cake"
-viewBox="0 0 520 430">
+        <circle cx="100" cy="340" r="8" fill="#F7CAC9"/>
+        <circle cx="160" cy="340" r="8" fill="#91A8D0"/>
+        <circle cx="225" cy="340" r="8" fill="#F7CAC9"/>
+        <circle cx="290" cy="340" r="8" fill="#91A8D0"/>
+        <circle cx="355" cy="340" r="8" fill="#F7CAC9"/>
+        <circle cx="440" cy="340" r="8" fill="#91A8D0"/>
 
-<!-- bougies -->
+        <!-- assiette -->
+        <ellipse cx="270" cy="402" rx="210" ry="30"
+          fill="#F8C9D4" stroke="#F2B1C3" stroke-width="4"/>
 
-<rect
-x="190"
-y="45"
-width="18"
-height="85"
-rx="9"
-fill="#F7CAC9"/>
+      </svg>
+    </div>
 
-<ellipse
-class="flame"
-cx="199"
-cy="28"
-rx="14"
-ry="22"
-fill="#FFD76B"/>
+    <p id="etat">allow microphone</p>
+    <button onclick="rallumer()">light candles</button>
+  </div>
 
-<ellipse
-class="flame"
-cx="199"
-cy="32"
-rx="8"
-ry="13"
-fill="#FFF8D8"/>
-
-<rect
-x="251"
-y="45"
-width="18"
-height="85"
-rx="9"
-fill="#91A8D0"/>
-
-<ellipse
-class="flame"
-cx="260"
-cy="28"
-rx="14"
-ry="22"
-fill="#FFD76B"/>
-
-<ellipse
-class="flame"
-cx="260"
-cy="32"
-rx="8"
-ry="13"
-fill="#FFF8D8"/>
-
-<rect
-x="312"
-y="45"
-width="18"
-height="85"
-rx="9"
-fill="#F7CAC9"/>
-
-<ellipse
-class="flame"
-cx="321"
-cy="28"
-rx="14"
-ry="22"
-fill="#FFD76B"/>
-
-<ellipse
-class="flame"
-cx="321"
-cy="32"
-rx="8"
-ry="13"
-fill="#FFF8D8"/>
-
-<!-- haut -->
-
-<ellipse
-cx="260"
-cy="165"
-rx="125"
-ry="42"
-fill="#FFF9F8"
-stroke="#B8C9E9"
-stroke-width="4"/>
-
-<path
-d="
-M135 165
-V250
-Q135 272 157 272
-H363
-Q385 272 385 250
-V165"
-fill="#FFF9F8"
-stroke="#B8C9E9"
-stroke-width="4"/>
-
-<!-- déco haut -->
-
-<path
-
-d="
-M145 215
-Q165 240 190 215
-Q215 240 240 215
-Q265 240 290 215
-Q315 240 340 215
-Q360 235 375 215"
-
-fill="none"
-
-stroke="#91A8D0"
-
-stroke-width="3"/>
-
-<circle cx="145" cy="215" r="7" fill="#F7CAC9"/>
-<circle cx="190" cy="215" r="7" fill="#91A8D0"/>
-<circle cx="240" cy="215" r="7" fill="#F7CAC9"/>
-<circle cx="290" cy="215" r="7" fill="#91A8D0"/>
-<circle cx="340" cy="215" r="7" fill="#F7CAC9"/>
-<circle cx="375" cy="215" r="7" fill="#91A8D0"/>
-
-<!-- bas -->
-
-<ellipse
-cx="260"
-cy="285"
-rx="180"
-ry="55"
-fill="#FFF9F8"
-stroke="#F3B4CA"
-stroke-width="4"/>
-
-<path
-d="
-M80 285
-V370
-Q80 400 110 400
-H410
-Q440 400 440 370
-V285"
-fill="#FFF9F8"
-stroke="#F3B4CA"
-stroke-width="4"/>
-
-<!-- déco bas -->
-
-<path
-
-d="
-M95 335
-Q120 370 150 335
-Q180 370 210 335
-Q240 370 270 335
-Q300 370 330 335
-Q360 370 390 335
-Q415 360 430 335"
-
-fill="none"
-
-stroke="#91A8D0"
-
-stroke-width="3"/>
-
-<circle cx="95" cy="335" r="8" fill="#F7CAC9"/>
-<circle cx="150" cy="335" r="8" fill="#91A8D0"/>
-<circle cx="210" cy="335" r="8" fill="#F7CAC9"/>
-<circle cx="270" cy="335" r="8" fill="#91A8D0"/>
-<circle cx="330" cy="335" r="8" fill="#F7CAC9"/>
-<circle cx="390" cy="335" r="8" fill="#91A8D0"/>
-<circle cx="430" cy="335" r="8" fill="#F7CAC9"/>
-
-<!-- assiette -->
-
-<ellipse
-
-cx="260"
-
-cy="398"
-
-rx="205"
-
-ry="30"
-
-fill="#F8C9D4"
-
-stroke="#F2B1C3"
-
-stroke-width="4"/>
-
-</svg>
-
-</div>
-
-<p id="etat">
-
-allow microphone
-
-</p>
-
-<button
-onclick="rallumer()">
-
-light candles
-
-</button>
-
-</div>
-
-<iframe
-id="youtube"
-allow="autoplay">
-</iframe>
+  <iframe id="youtube" allow="autoplay"></iframe>
 
 </div>
 
 <script>
-
 function commencer(){
-
-depart
-.classList
-.add(
-"hidden"
-)
-
-anniv
-.classList
-.remove(
-"hidden"
-)
-
-youtube.src=
-
-"https://www.youtube.com/embed/GZ5cOiqr5xA?autoplay=1"
-
-micro()
-
+  depart.classList.add("hidden");
+  anniv.classList.remove("hidden");
+  youtube.src = "https://www.youtube.com/embed/GZ5cOiqr5xA?autoplay=1";
+  micro();
 }
 
 function rallumer(){
-
-cake
-.classList
-.remove(
-"off"
-)
-
-etat.innerHTML=
-
-"blow"
-
+  cake.classList.remove("off");
+  etat.innerHTML = "blow";
 }
 
 async function micro(){
+  try{
+    const stream = await navigator.mediaDevices.getUserMedia({ audio:true });
+    etat.innerHTML = "blow";
 
-try{
+    const context = new AudioContext();
+    const source = context.createMediaStreamSource(stream);
+    const analyser = context.createAnalyser();
 
-const stream=
+    source.connect(analyser);
 
-await navigator
-.mediaDevices
-.getUserMedia({
+    const data = new Uint8Array(analyser.frequencyBinCount);
 
-audio:true
+    function detect(){
+      analyser.getByteFrequencyData(data);
 
-})
+      let volume = data.reduce((a,b)=>a+b) / data.length;
 
-etat.innerHTML=
+      if(volume > 40){
+        cake.classList.add("off");
+        etat.innerHTML = "candles out";
+      }
 
-"blow"
+      requestAnimationFrame(detect);
+    }
 
-const context=
+    detect();
 
-new AudioContext()
-
-const source=
-
-context
-.createMediaStreamSource(
-stream
-)
-
-const analyser=
-
-context
-.createAnalyser()
-
-source.connect(
-analyser
-)
-
-const data=
-
-new Uint8Array(
-analyser.frequencyBinCount
-)
-
-function detect(){
-
-analyser
-.getByteFrequencyData(
-data
-)
-
-let volume=
-
-data.reduce(
-(a,b)=>a+b
-)
-/data.length
-
-if(volume>40){
-
-cake
-.classList
-.add(
-"off"
-)
-
-etat.innerHTML=
-
-"candles out"
-
+  }catch{
+    etat.innerHTML = "microphone blocked";
+  }
 }
-
-requestAnimationFrame(
-detect
-)
-
-}
-
-detect()
-
-}
-
-catch{
-
-etat.innerHTML=
-
-"microphone blocked"
-
-}
-
-}
-
 </script>
 
 </body>
-
 </html>
