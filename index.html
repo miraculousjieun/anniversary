@@ -1,351 +1,800 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sweet 28, my angel.</title>
+<meta name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>
+Sweet 28, my angel.
+</title>
 
 <style>
+
 *{
-  box-sizing:border-box;
-  font-family:"Trebuchet MS", sans-serif;
+
+box-sizing:border-box;
+
+font-family:
+
+"Trebuchet MS",
+sans-serif;
+
 }
 
 body{
-  margin:0;
-  min-height:100vh;
-  padding:20px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(135deg,#F7CAC9 0%,#F5E4EF 45%,#91A8D0 100%);
+
+margin:0;
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:20px;
+
+background:
+
+linear-gradient(
+135deg,
+#F7CAC9 0%,
+#F3E7EF 45%,
+#91A8D0 100%
+);
+
 }
 
 .card{
-  width:900px;
-  max-width:95%;
-  padding:60px;
-  text-align:center;
-  border-radius:42px;
-  background:rgba(255,255,255,0.55);
-  backdrop-filter:blur(16px);
-  border:2px solid rgba(255,255,255,0.7);
-  box-shadow:0 18px 45px rgba(145,168,208,0.22);
+
+width:900px;
+
+max-width:95%;
+
+padding:60px;
+
+background:
+
+rgba(
+255,
+255,
+255,
+0.55
+);
+
+backdrop-filter:
+
+blur(14px);
+
+border:
+
+2px solid
+rgba(
+255,
+255,
+255,
+0.6
+);
+
+border-radius:40px;
+
+text-align:center;
+
+box-shadow:
+
+0 15px 45px
+rgba(
+145,
+168,
+208,
+0.2
+);
+
 }
 
 h1{
-  margin:0 0 55px;
-  font-size:49px;
-  font-weight:500;
-  color:#5f82b4;
-  white-space:nowrap;
+
+margin:0 0 45px;
+
+font-size:49px;
+
+font-weight:500;
+
+white-space:nowrap;
+
+color:#6482B2;
+
 }
 
-button{
-  margin-top:20px;
-  border:none;
-  padding:16px 42px;
-  border-radius:40px;
-  font-size:18px;
-  color:white;
-  cursor:pointer;
-  background:linear-gradient(135deg,#F7CAC9,#91A8D0);
-  box-shadow:0 8px 22px rgba(145,168,208,0.25);
-}
-
-.hidden{
-  display:none;
-}
+/* gâteau */
 
 .cake{
-  position:relative;
-  width:520px;
-  height:430px;
-  margin:0 auto 20px;
+
+position:relative;
+
+width:520px;
+
+height:430px;
+
+margin:auto;
+
 }
 
 /* assiette */
+
 .plate{
-  position:absolute;
-  bottom:18px;
-  left:70px;
-  width:380px;
-  height:62px;
-  background:#F8C6D2;
-  border:4px solid #F2AFC2;
-  border-radius:50%;
-  z-index:1;
+
+position:absolute;
+
+left:50%;
+
+transform:
+
+translateX(-50%);
+
+bottom:18px;
+
+width:390px;
+
+height:60px;
+
+border-radius:50%;
+
+background:
+
+#F8C9D4;
+
+border:
+
+4px solid
+#F2B1C3;
+
 }
 
 /* étage bas */
-.bottom-layer{
-  position:absolute;
-  bottom:55px;
-  left:75px;
-  width:370px;
-  height:140px;
-  background:#FFF9F7;
-  border:4px solid #F3AFC7;
-  border-top:none;
-  border-radius:0 0 28px 28px;
-  z-index:3;
+
+.bottom{
+
+position:absolute;
+
+left:50%;
+
+transform:
+
+translateX(-50%);
+
+bottom:55px;
+
+width:360px;
+
+height:140px;
+
+background:
+
+#FFF9F8;
+
+border:
+
+4px solid
+#F3B4CA;
+
+border-top:none;
+
+border-radius:
+
+0 0 28px 28px;
+
 }
 
 .bottom-top{
-  position:absolute;
-  bottom:165px;
-  left:75px;
-  width:370px;
-  height:72px;
-  background:#FFF9F7;
-  border:4px solid #F3AFC7;
-  border-radius:50%;
-  z-index:4;
+
+position:absolute;
+
+left:50%;
+
+transform:
+
+translateX(-50%);
+
+bottom:165px;
+
+width:360px;
+
+height:72px;
+
+background:
+
+#FFF9F8;
+
+border:
+
+4px solid
+#F3B4CA;
+
+border-radius:50%;
+
 }
 
 /* étage haut */
-.top-layer{
-  position:absolute;
-  bottom:205px;
-  left:145px;
-  width:230px;
-  height:110px;
-  background:#FFF9F7;
-  border:4px solid #B8C9E9;
-  border-top:none;
-  border-radius:0 0 24px 24px;
-  z-index:6;
+
+.top{
+
+position:absolute;
+
+left:50%;
+
+transform:
+
+translateX(-50%);
+
+bottom:205px;
+
+width:230px;
+
+height:110px;
+
+background:
+
+#FFF9F8;
+
+border:
+
+4px solid
+#B8C9E9;
+
+border-top:none;
+
+border-radius:
+
+0 0 22px 22px;
+
 }
 
 .top-top{
-  position:absolute;
-  bottom:290px;
-  left:145px;
-  width:230px;
-  height:60px;
-  background:#FFF9F7;
-  border:4px solid #B8C9E9;
-  border-radius:50%;
-  z-index:7;
+
+position:absolute;
+
+left:50%;
+
+transform:
+
+translateX(-50%);
+
+bottom:290px;
+
+width:230px;
+
+height:60px;
+
+background:
+
+#FFF9F8;
+
+border:
+
+4px solid
+#B8C9E9;
+
+border-radius:50%;
+
 }
 
-/* guirlandes */
-.garland{
-  position:absolute;
-  width:70px;
-  height:35px;
-  border-bottom:3px solid #CDB8E8;
-  border-radius:0 0 50px 50px;
-  z-index:9;
-}
+/* déco gâteau */
 
-.g1{ left:95px; bottom:145px; }
-.g2{ left:165px; bottom:132px; }
-.g3{ left:235px; bottom:132px; }
-.g4{ left:305px; bottom:145px; }
-.g5{ left:155px; bottom:255px; }
-.g6{ left:225px; bottom:245px; }
-.g7{ left:295px; bottom:255px; }
+.line{
+
+position:absolute;
+
+border-bottom:
+
+3px solid
+#D3B9EB;
+
+height:30px;
+
+width:70px;
+
+border-radius:
+
+0 0 40px 40px;
+
+}
 
 .dot{
-  position:absolute;
-  width:12px;
-  height:12px;
-  border-radius:50%;
-  z-index:10;
+
+position:absolute;
+
+width:12px;
+
+height:12px;
+
+border-radius:50%;
+
 }
 
-.pink{ background:#F7AFC8; }
-.blue{ background:#91A8D0; }
-.lav{ background:#CDB8E8; }
+.pink{
 
-.d1{ left:95px; bottom:145px; }
-.d2{ left:160px; bottom:130px; }
-.d3{ left:235px; bottom:130px; }
-.d4{ left:305px; bottom:145px; }
-.d5{ left:375px; bottom:145px; }
+background:#F7AFC8;
 
-.d6{ left:155px; bottom:255px; }
-.d7{ left:225px; bottom:245px; }
-.d8{ left:295px; bottom:255px; }
-.d9{ left:365px; bottom:255px; }
+}
 
-/* bougies AU-DESSUS du gâteau */
+.blue{
+
+background:#91A8D0;
+
+}
+
+.lav{
+
+background:#D4BEE9;
+
+}
+
+/* étage haut */
+
+.l1{
+
+left:145px;
+
+bottom:245px;
+
+}
+
+.l2{
+
+left:215px;
+
+bottom:235px;
+
+}
+
+.l3{
+
+left:285px;
+
+bottom:245px;
+
+}
+
+/* étage bas */
+
+.l4{
+
+left:95px;
+
+bottom:135px;
+
+}
+
+.l5{
+
+left:170px;
+
+bottom:122px;
+
+}
+
+.l6{
+
+left:245px;
+
+bottom:122px;
+
+}
+
+.l7{
+
+left:320px;
+
+bottom:135px;
+
+}
+
+/* bougies */
+
 .candle{
-  position:absolute;
-  bottom:330px;
-  width:16px;
-  height:85px;
-  border-radius:10px;
-  z-index:12;
+
+position:absolute;
+
+bottom:330px;
+
+width:18px;
+
+height:85px;
+
+border-radius:10px;
+
+z-index:20;
+
 }
 
 .c1{
-  left:200px;
-  background:#F7CAC9;
+
+left:185px;
+
+background:
+
+#F7CAC9;
+
 }
 
 .c2{
-  left:252px;
-  background:#91A8D0;
+
+left:251px;
+
+background:
+
+#91A8D0;
+
 }
 
 .c3{
-  left:304px;
-  background:#D8BFE7;
+
+left:317px;
+
+background:
+
+#D8BFE7;
+
 }
 
 .flame{
-  position:absolute;
-  top:-32px;
-  left:-4px;
-  width:24px;
-  height:34px;
-  border-radius:50%;
-  background:radial-gradient(circle,#FFF8D6 15%,#FFD76D 50%,#FF9B45 82%);
-  box-shadow:0 0 15px rgba(255,170,60,0.7);
-  animation:fire .25s infinite alternate;
+
+position:absolute;
+
+top:-30px;
+
+left:-3px;
+
+width:24px;
+
+height:34px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+circle,
+#FFFDEA 15%,
+#FFD56B 50%,
+#FF9952 80%
+);
+
+box-shadow:
+
+0 0 18px
+rgba(
+255,
+180,
+70,
+0.7
+);
+
+animation:
+
+fire .25s
+infinite alternate;
+
 }
 
 .off .flame{
-  display:none;
+
+display:none;
+
 }
 
 @keyframes fire{
-  from{ transform:scale(1); }
-  to{ transform:scale(1.12) rotate(-4deg); }
+
+from{
+
+transform:
+
+scale(1);
+
+}
+
+to{
+
+transform:
+
+scale(1.12)
+
+rotate(-4deg);
+
+}
+
+}
+
+button{
+
+border:none;
+
+padding:
+
+16px 38px;
+
+border-radius:40px;
+
+font-size:18px;
+
+cursor:pointer;
+
+color:white;
+
+background:
+
+linear-gradient(
+135deg,
+#F7CAC9,
+#91A8D0
+);
+
+box-shadow:
+
+0 8px 22px
+rgba(
+145,
+168,
+208,
+0.25
+);
+
+margin-top:20px;
+
 }
 
 #etat{
-  color:#5f82b4;
-  font-size:18px;
-  margin-top:20px;
+
+color:#6482B2;
+
+font-size:18px;
+
+margin-top:20px;
+
+}
+
+.hidden{
+
+display:none;
+
 }
 
 iframe{
-  display:none;
+
+display:none;
+
 }
 
-@media(max-width:600px){
-  h1{
-    font-size:32px;
-  }
-
-  .cake{
-    transform:scale(.72);
-    transform-origin:center top;
-    height:320px;
-    width:520px;
-    margin-left:50%;
-    translate:-50%;
-  }
-}
 </style>
+
 </head>
 
 <body>
 
 <div class="card">
 
-  <div id="depart">
-    <h1>Sweet 28, my angel.</h1>
-    <button onclick="commencer()">for you</button>
-  </div>
+<div id="depart">
 
-  <div id="anniv" class="hidden">
-    <h1>Sweet 28, my angel.</h1>
+<h1>
 
-    <div class="cake" id="cake">
+Sweet 28, my angel.
 
-      <div class="candle c1"><div class="flame"></div></div>
-      <div class="candle c2"><div class="flame"></div></div>
-      <div class="candle c3"><div class="flame"></div></div>
+</h1>
 
-      <div class="top-top"></div>
-      <div class="top-layer"></div>
+<button
+onclick="commencer()">
 
-      <div class="bottom-top"></div>
-      <div class="bottom-layer"></div>
-      <div class="plate"></div>
+for you
 
-      <div class="garland g1"></div>
-      <div class="garland g2"></div>
-      <div class="garland g3"></div>
-      <div class="garland g4"></div>
-      <div class="garland g5"></div>
-      <div class="garland g6"></div>
-      <div class="garland g7"></div>
+</button>
 
-      <div class="dot pink d1"></div>
-      <div class="dot lav d2"></div>
-      <div class="dot pink d3"></div>
-      <div class="dot blue d4"></div>
-      <div class="dot lav d5"></div>
+</div>
 
-      <div class="dot pink d6"></div>
-      <div class="dot blue d7"></div>
-      <div class="dot lav d8"></div>
-      <div class="dot pink d9"></div>
+<div
+id="anniv"
+class="hidden">
 
-    </div>
+<h1>
 
-    <p id="etat">allow microphone</p>
-    <button onclick="rallumer()">light candles</button>
-  </div>
+Sweet 28, my angel.
 
-  <iframe id="youtube" allow="autoplay"></iframe>
+</h1>
+
+<div
+id="cake"
+class="cake">
+
+<div class="plate"></div>
+
+<div class="bottom"></div>
+
+<div class="bottom-top"></div>
+
+<div class="top"></div>
+
+<div class="top-top"></div>
+
+<div class="line l1"></div>
+<div class="line l2"></div>
+<div class="line l3"></div>
+
+<div class="line l4"></div>
+<div class="line l5"></div>
+<div class="line l6"></div>
+<div class="line l7"></div>
+
+<div class="candle c1">
+<div class="flame"></div>
+</div>
+
+<div class="candle c2">
+<div class="flame"></div>
+</div>
+
+<div class="candle c3">
+<div class="flame"></div>
+</div>
+
+</div>
+
+<p id="etat">
+
+allow microphone
+
+</p>
+
+<button
+onclick="rallumer()">
+
+light candles
+
+</button>
+
+</div>
+
+<iframe
+id="youtube"
+allow="autoplay">
+</iframe>
 
 </div>
 
 <script>
+
 function commencer(){
-  depart.classList.add("hidden");
-  anniv.classList.remove("hidden");
 
-  youtube.src = "https://www.youtube.com/embed/GZ5cOiqr5xA?autoplay=1";
+depart
+.classList
+.add(
+"hidden"
+)
 
-  micro();
+anniv
+.classList
+.remove(
+"hidden"
+)
+
+youtube.src=
+
+"https://www.youtube.com/embed/GZ5cOiqr5xA?autoplay=1"
+
+micro()
+
 }
 
 function rallumer(){
-  cake.classList.remove("off");
-  etat.innerHTML = "blow";
+
+cake
+.classList
+.remove(
+"off"
+)
+
+etat.innerHTML=
+
+"blow"
+
 }
 
 async function micro(){
-  try{
-    const stream = await navigator.mediaDevices.getUserMedia({ audio:true });
 
-    etat.innerHTML = "blow";
+try{
 
-    const context = new AudioContext();
-    const source = context.createMediaStreamSource(stream);
-    const analyser = context.createAnalyser();
+const stream=
 
-    source.connect(analyser);
+await navigator
+.mediaDevices
+.getUserMedia({
+audio:true
+})
 
-    const data = new Uint8Array(analyser.frequencyBinCount);
+etat.innerHTML=
 
-    function detect(){
-      analyser.getByteFrequencyData(data);
+"blow"
 
-      let volume = data.reduce((a,b) => a + b) / data.length;
+const context=
 
-      if(volume > 40){
-        cake.classList.add("off");
-        etat.innerHTML = "candles out";
-      }
+new AudioContext()
 
-      requestAnimationFrame(detect);
-    }
+const source=
 
-    detect();
+context
+.createMediaStreamSource(
+stream
+)
 
-  } catch{
-    etat.innerHTML = "microphone blocked";
-  }
+const analyser=
+
+context
+.createAnalyser()
+
+source
+.connect(
+analyser
+)
+
+const data=
+
+new Uint8Array(
+analyser.frequencyBinCount
+)
+
+function detect(){
+
+analyser
+.getByteFrequencyData(
+data
+)
+
+let volume=
+
+data.reduce(
+(a,b)=>a+b
+)
+/data.length
+
+if(volume>40){
+
+cake
+.classList
+.add(
+"off"
+)
+
+etat.innerHTML=
+
+"candles out"
+
 }
+
+requestAnimationFrame(
+detect
+)
+
+}
+
+detect()
+
+}
+
+catch{
+
+etat.innerHTML=
+
+"microphone blocked"
+
+}
+
+}
+
 </script>
 
 </body>
+
 </html>
