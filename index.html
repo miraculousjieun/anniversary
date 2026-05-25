@@ -11,11 +11,11 @@
 <style>
 
 *{
-font-family:
-'Helvetica Neue',
-Arial,
-sans-serif;
 box-sizing:border-box;
+
+font-family:
+"Trebuchet MS",
+sans-serif;
 }
 
 body{
@@ -32,17 +32,21 @@ linear-gradient(
 );
 
 display:flex;
+
 justify-content:center;
+
 align-items:center;
 
 min-height:100vh;
+
+padding:20px;
 
 }
 
 .card{
 
-width:850px;
-max-width:90%;
+width:900px;
+max-width:95%;
 
 padding:60px;
 
@@ -57,9 +61,9 @@ rgba(
 
 backdrop-filter:
 
-blur(15px);
+blur(16px);
 
-border-radius:40px;
+border-radius:42px;
 
 box-shadow:
 
@@ -68,7 +72,7 @@ rgba(
 145,
 168,
 208,
-0.25
+0.22
 );
 
 text-align:center;
@@ -77,15 +81,17 @@ text-align:center;
 
 h1{
 
-font-size:54px;
+font-size:49px;
 
 font-weight:500;
 
-color:#6F83A8;
-
-letter-spacing:1px;
+color:#7085AB;
 
 margin-bottom:45px;
+
+white-space:nowrap;
+
+letter-spacing:0.5px;
 
 }
 
@@ -94,13 +100,14 @@ button{
 border:none;
 
 padding:
+
 16px 38px;
+
+font-size:18px;
 
 border-radius:40px;
 
 cursor:pointer;
-
-font-size:18px;
 
 background:
 
@@ -116,7 +123,7 @@ transition:.25s;
 
 box-shadow:
 
-0 8px 22px
+0 8px 20px
 rgba(
 145,
 168,
@@ -129,6 +136,7 @@ rgba(
 button:hover{
 
 transform:
+
 translateY(-2px);
 
 }
@@ -242,9 +250,7 @@ border-radius:
 .d1{
 
 left:105px;
-
 bottom:118px;
-
 height:30px;
 
 }
@@ -252,9 +258,7 @@ height:30px;
 .d2{
 
 left:160px;
-
 bottom:105px;
-
 height:48px;
 
 }
@@ -262,9 +266,7 @@ height:48px;
 .d3{
 
 left:215px;
-
 bottom:120px;
-
 height:32px;
 
 }
@@ -285,7 +287,6 @@ border-radius:6px;
 .c1{
 
 left:120px;
-
 background:#F7CAC9;
 
 }
@@ -293,7 +294,6 @@ background:#F7CAC9;
 .c2{
 
 left:160px;
-
 background:#91A8D0;
 
 }
@@ -301,8 +301,7 @@ background:#91A8D0;
 .c3{
 
 left:200px;
-
-background:#D8BFE7;
+background:#D7BFE6;
 
 }
 
@@ -311,7 +310,6 @@ background:#D8BFE7;
 position:absolute;
 
 top:-28px;
-
 left:-2px;
 
 width:18px;
@@ -364,9 +362,9 @@ rotate(-3deg);
 
 margin-top:25px;
 
-color:#6F83A8;
-
 font-size:18px;
+
+color:#7085AB;
 
 }
 
@@ -473,29 +471,11 @@ allow="autoplay">
 
 function commencer(){
 
-document
-.getElementById(
-"depart"
-)
-.classList
-.add(
-"hidden"
-)
+depart.classList.add("hidden")
 
-document
-.getElementById(
-"anniv"
-)
-.classList
-.remove(
-"hidden"
-)
+anniv.classList.remove("hidden")
 
-document
-.getElementById(
-"youtube"
-)
-.src=
+youtube.src=
 
 "https://www.youtube.com/embed/GZ5cOiqr5xA?autoplay=1"
 
@@ -505,22 +485,9 @@ micro()
 
 function rallumer(){
 
-document
-.getElementById(
-"cake"
-)
-.classList
-.remove(
-"off"
-)
+cake.classList.remove("off")
 
-document
-.getElementById(
-"etat"
-)
-.innerHTML=
-
-"blow"
+etat.innerHTML="blow"
 
 }
 
@@ -538,13 +505,7 @@ audio:true
 
 })
 
-document
-.getElementById(
-"etat"
-)
-.innerHTML=
-
-"blow"
+etat.innerHTML="blow"
 
 const context=
 
@@ -562,8 +523,7 @@ const analyser=
 context
 .createAnalyser()
 
-source
-.connect(
+source.connect(
 analyser
 )
 
@@ -589,20 +549,11 @@ data.reduce(
 
 if(volume>40){
 
-document
-.getElementById(
-"cake"
-)
-.classList
-.add(
+cake.classList.add(
 "off"
 )
 
-document
-.getElementById(
-"etat"
-)
-.innerHTML=
+etat.innerHTML=
 
 "candles out"
 
@@ -620,11 +571,7 @@ detect()
 
 catch{
 
-document
-.getElementById(
-"etat"
-)
-.innerHTML=
+etat.innerHTML=
 
 "microphone blocked"
 
