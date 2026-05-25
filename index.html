@@ -14,14 +14,8 @@ Sweet 28, my angel.
 <style>
 
 *{
-
 box-sizing:border-box;
-
-font-family:
-
-"Trebuchet MS",
-sans-serif;
-
+font-family:"Trebuchet MS",sans-serif;
 }
 
 body{
@@ -42,9 +36,9 @@ background:
 
 linear-gradient(
 135deg,
-#F7CAC9 0%,
-#F3E7EF 45%,
-#91A8D0 100%
+#F7CAC9,
+#F5EBF1,
+#91A8D0
 );
 
 }
@@ -55,7 +49,7 @@ width:900px;
 
 max-width:95%;
 
-padding:60px;
+padding:55px 35px;
 
 background:
 
@@ -63,12 +57,12 @@ rgba(
 255,
 255,
 255,
-0.55
+0.58
 );
 
 backdrop-filter:
 
-blur(14px);
+blur(15px);
 
 border:
 
@@ -77,436 +71,36 @@ rgba(
 255,
 255,
 255,
-0.6
+0.7
 );
 
-border-radius:40px;
-
-text-align:center;
+border-radius:42px;
 
 box-shadow:
 
-0 15px 45px
+0 18px 45px
 rgba(
 145,
 168,
 208,
-0.2
+0.22
 );
+
+text-align:center;
 
 }
 
 h1{
 
-margin:0 0 45px;
+margin:0 0 35px;
 
-font-size:49px;
+font-size:44px;
 
 font-weight:500;
 
 white-space:nowrap;
 
-color:#6482B2;
-
-}
-
-/* gâteau */
-
-.cake{
-
-position:relative;
-
-width:520px;
-
-height:430px;
-
-margin:auto;
-
-}
-
-/* assiette */
-
-.plate{
-
-position:absolute;
-
-left:50%;
-
-transform:
-
-translateX(-50%);
-
-bottom:18px;
-
-width:390px;
-
-height:60px;
-
-border-radius:50%;
-
-background:
-
-#F8C9D4;
-
-border:
-
-4px solid
-#F2B1C3;
-
-}
-
-/* étage bas */
-
-.bottom{
-
-position:absolute;
-
-left:50%;
-
-transform:
-
-translateX(-50%);
-
-bottom:55px;
-
-width:360px;
-
-height:140px;
-
-background:
-
-#FFF9F8;
-
-border:
-
-4px solid
-#F3B4CA;
-
-border-top:none;
-
-border-radius:
-
-0 0 28px 28px;
-
-}
-
-.bottom-top{
-
-position:absolute;
-
-left:50%;
-
-transform:
-
-translateX(-50%);
-
-bottom:165px;
-
-width:360px;
-
-height:72px;
-
-background:
-
-#FFF9F8;
-
-border:
-
-4px solid
-#F3B4CA;
-
-border-radius:50%;
-
-}
-
-/* étage haut */
-
-.top{
-
-position:absolute;
-
-left:50%;
-
-transform:
-
-translateX(-50%);
-
-bottom:205px;
-
-width:230px;
-
-height:110px;
-
-background:
-
-#FFF9F8;
-
-border:
-
-4px solid
-#B8C9E9;
-
-border-top:none;
-
-border-radius:
-
-0 0 22px 22px;
-
-}
-
-.top-top{
-
-position:absolute;
-
-left:50%;
-
-transform:
-
-translateX(-50%);
-
-bottom:290px;
-
-width:230px;
-
-height:60px;
-
-background:
-
-#FFF9F8;
-
-border:
-
-4px solid
-#B8C9E9;
-
-border-radius:50%;
-
-}
-
-/* déco gâteau */
-
-.line{
-
-position:absolute;
-
-border-bottom:
-
-3px solid
-#D3B9EB;
-
-height:30px;
-
-width:70px;
-
-border-radius:
-
-0 0 40px 40px;
-
-}
-
-.dot{
-
-position:absolute;
-
-width:12px;
-
-height:12px;
-
-border-radius:50%;
-
-}
-
-.pink{
-
-background:#F7AFC8;
-
-}
-
-.blue{
-
-background:#91A8D0;
-
-}
-
-.lav{
-
-background:#D4BEE9;
-
-}
-
-/* étage haut */
-
-.l1{
-
-left:145px;
-
-bottom:245px;
-
-}
-
-.l2{
-
-left:215px;
-
-bottom:235px;
-
-}
-
-.l3{
-
-left:285px;
-
-bottom:245px;
-
-}
-
-/* étage bas */
-
-.l4{
-
-left:95px;
-
-bottom:135px;
-
-}
-
-.l5{
-
-left:170px;
-
-bottom:122px;
-
-}
-
-.l6{
-
-left:245px;
-
-bottom:122px;
-
-}
-
-.l7{
-
-left:320px;
-
-bottom:135px;
-
-}
-
-/* bougies */
-
-.candle{
-
-position:absolute;
-
-bottom:330px;
-
-width:18px;
-
-height:85px;
-
-border-radius:10px;
-
-z-index:20;
-
-}
-
-.c1{
-
-left:185px;
-
-background:
-
-#F7CAC9;
-
-}
-
-.c2{
-
-left:251px;
-
-background:
-
-#91A8D0;
-
-}
-
-.c3{
-
-left:317px;
-
-background:
-
-#D8BFE7;
-
-}
-
-.flame{
-
-position:absolute;
-
-top:-30px;
-
-left:-3px;
-
-width:24px;
-
-height:34px;
-
-border-radius:50%;
-
-background:
-
-radial-gradient(
-circle,
-#FFFDEA 15%,
-#FFD56B 50%,
-#FF9952 80%
-);
-
-box-shadow:
-
-0 0 18px
-rgba(
-255,
-180,
-70,
-0.7
-);
-
-animation:
-
-fire .25s
-infinite alternate;
-
-}
-
-.off .flame{
-
-display:none;
-
-}
-
-@keyframes fire{
-
-from{
-
-transform:
-
-scale(1);
-
-}
-
-to{
-
-transform:
-
-scale(1.12)
-
-rotate(-4deg);
-
-}
+color:#5F82B4;
 
 }
 
@@ -516,7 +110,7 @@ border:none;
 
 padding:
 
-16px 38px;
+16px 42px;
 
 border-radius:40px;
 
@@ -544,23 +138,75 @@ rgba(
 0.25
 );
 
-margin-top:20px;
-
-}
-
-#etat{
-
-color:#6482B2;
-
-font-size:18px;
-
-margin-top:20px;
-
 }
 
 .hidden{
 
 display:none;
+
+}
+
+.cake-wrap{
+
+display:flex;
+
+justify-content:center;
+
+}
+
+svg{
+
+width:520px;
+
+max-width:100%;
+
+display:block;
+
+}
+
+.flame{
+
+animation:
+
+fire .25s
+infinite alternate;
+
+transform-origin:center;
+
+}
+
+.off .flame{
+
+display:none;
+
+}
+
+@keyframes fire{
+
+from{
+
+transform:
+scale(1);
+
+}
+
+to{
+
+transform:
+scale(1.12)
+rotate(-3deg);
+
+}
+
+}
+
+#etat{
+
+font-size:18px;
+
+margin:20px 0;
+
+color:#5F82B4;
 
 }
 
@@ -605,40 +251,203 @@ Sweet 28, my angel.
 
 </h1>
 
-<div
+<div class="cake-wrap">
+
+<svg
 id="cake"
-class="cake">
+viewBox="0 0 520 430">
 
-<div class="plate"></div>
+<!-- bougies -->
 
-<div class="bottom"></div>
+<rect
+x="190"
+y="45"
+width="18"
+height="85"
+rx="9"
+fill="#F7CAC9"/>
 
-<div class="bottom-top"></div>
+<ellipse
+class="flame"
+cx="199"
+cy="28"
+rx="14"
+ry="22"
+fill="#FFD76B"/>
 
-<div class="top"></div>
+<ellipse
+class="flame"
+cx="199"
+cy="32"
+rx="8"
+ry="13"
+fill="#FFF8D8"/>
 
-<div class="top-top"></div>
+<rect
+x="251"
+y="45"
+width="18"
+height="85"
+rx="9"
+fill="#91A8D0"/>
 
-<div class="line l1"></div>
-<div class="line l2"></div>
-<div class="line l3"></div>
+<ellipse
+class="flame"
+cx="260"
+cy="28"
+rx="14"
+ry="22"
+fill="#FFD76B"/>
 
-<div class="line l4"></div>
-<div class="line l5"></div>
-<div class="line l6"></div>
-<div class="line l7"></div>
+<ellipse
+class="flame"
+cx="260"
+cy="32"
+rx="8"
+ry="13"
+fill="#FFF8D8"/>
 
-<div class="candle c1">
-<div class="flame"></div>
-</div>
+<rect
+x="312"
+y="45"
+width="18"
+height="85"
+rx="9"
+fill="#F7CAC9"/>
 
-<div class="candle c2">
-<div class="flame"></div>
-</div>
+<ellipse
+class="flame"
+cx="321"
+cy="28"
+rx="14"
+ry="22"
+fill="#FFD76B"/>
 
-<div class="candle c3">
-<div class="flame"></div>
-</div>
+<ellipse
+class="flame"
+cx="321"
+cy="32"
+rx="8"
+ry="13"
+fill="#FFF8D8"/>
+
+<!-- haut -->
+
+<ellipse
+cx="260"
+cy="165"
+rx="125"
+ry="42"
+fill="#FFF9F8"
+stroke="#B8C9E9"
+stroke-width="4"/>
+
+<path
+d="
+M135 165
+V250
+Q135 272 157 272
+H363
+Q385 272 385 250
+V165"
+fill="#FFF9F8"
+stroke="#B8C9E9"
+stroke-width="4"/>
+
+<!-- déco haut -->
+
+<path
+
+d="
+M145 215
+Q165 240 190 215
+Q215 240 240 215
+Q265 240 290 215
+Q315 240 340 215
+Q360 235 375 215"
+
+fill="none"
+
+stroke="#91A8D0"
+
+stroke-width="3"/>
+
+<circle cx="145" cy="215" r="7" fill="#F7CAC9"/>
+<circle cx="190" cy="215" r="7" fill="#91A8D0"/>
+<circle cx="240" cy="215" r="7" fill="#F7CAC9"/>
+<circle cx="290" cy="215" r="7" fill="#91A8D0"/>
+<circle cx="340" cy="215" r="7" fill="#F7CAC9"/>
+<circle cx="375" cy="215" r="7" fill="#91A8D0"/>
+
+<!-- bas -->
+
+<ellipse
+cx="260"
+cy="285"
+rx="180"
+ry="55"
+fill="#FFF9F8"
+stroke="#F3B4CA"
+stroke-width="4"/>
+
+<path
+d="
+M80 285
+V370
+Q80 400 110 400
+H410
+Q440 400 440 370
+V285"
+fill="#FFF9F8"
+stroke="#F3B4CA"
+stroke-width="4"/>
+
+<!-- déco bas -->
+
+<path
+
+d="
+M95 335
+Q120 370 150 335
+Q180 370 210 335
+Q240 370 270 335
+Q300 370 330 335
+Q360 370 390 335
+Q415 360 430 335"
+
+fill="none"
+
+stroke="#91A8D0"
+
+stroke-width="3"/>
+
+<circle cx="95" cy="335" r="8" fill="#F7CAC9"/>
+<circle cx="150" cy="335" r="8" fill="#91A8D0"/>
+<circle cx="210" cy="335" r="8" fill="#F7CAC9"/>
+<circle cx="270" cy="335" r="8" fill="#91A8D0"/>
+<circle cx="330" cy="335" r="8" fill="#F7CAC9"/>
+<circle cx="390" cy="335" r="8" fill="#91A8D0"/>
+<circle cx="430" cy="335" r="8" fill="#F7CAC9"/>
+
+<!-- assiette -->
+
+<ellipse
+
+cx="260"
+
+cy="398"
+
+rx="205"
+
+ry="30"
+
+fill="#F8C9D4"
+
+stroke="#F2B1C3"
+
+stroke-width="4"/>
+
+</svg>
 
 </div>
 
@@ -711,7 +520,9 @@ const stream=
 await navigator
 .mediaDevices
 .getUserMedia({
+
 audio:true
+
 })
 
 etat.innerHTML=
@@ -734,8 +545,7 @@ const analyser=
 context
 .createAnalyser()
 
-source
-.connect(
+source.connect(
 analyser
 )
 
