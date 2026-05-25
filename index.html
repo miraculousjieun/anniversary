@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Happy Birthday</title>
+
+<style>
+
+body{
+margin:0;
+background:#f8dce9;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.card{
+
+background:white;
+padding:40px;
+border-radius:30px;
+width:850px;
+max-width:90%;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+h1{
+
+color:#ff5aa5;
+font-size:55px;
+
+}
+
+button{
+
+background:#ff5aa5;
+color:white;
+border:none;
+padding:18px 35px;
+border-radius:35px;
+font-size:22px;
+cursor:pointer;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+.cake{
+
+position:relative;
+width:280px;
+height:260px;
+margin:auto;
+
+}
+
+.layer{
+
+position:absolute;
+background:#ffe5cc;
+border:4px solid #ffb6d9;
+
+}
+
+.top{
+
+width:220px;
+height:70px;
+
+bottom:90px;
+left:30px;
+
+border-radius:50%;
+
+}
+
+.bottom{
+
+width:220px;
+height:100px;
+
+bottom:0;
+left:30px;
+
+border-radius:0 0 25px 25px;
+
+}
+
+.icing{
+
+position:absolute;
+
+width:230px;
+height:35px;
+
+background:#ff91c4;
+
+bottom:85px;
+left:25px;
+
+border-radius:50%;
+
+}
+
+.candle{
+
+position:absolute;
+
+width:14px;
+height:60px;
+
+bottom:150px;
+
+border-radius:5px;
+
+}
+
+.c1{
+
+left:55px;
+background:#ff70a6;
+
+}
+
+.c2{
+
+left:105px;
+background:#ffd000;
+
+}
+
+.c3{
+
+left:155px;
+background:#52d6ff;
+
+}
+
+.c4{
+
+left:205px;
+background:#8d5cff;
+
+}
+
+.flame{
+
+position:absolute;
+
+top:-22px;
+left:-2px;
+
+font-size:24px;
+
+animation:flame 0.3s infinite alternate;
+
+}
+
+@keyframes flame{
+
+from{
+
+transform:scale(1);
+
+}
+
+to{
+
+transform:scale(1.15);
+
+}
+
+}
+
+.off .flame{
+
+display:none;
+
+}
+
+#etat{
+
+font-size:20px;
+color:#ff5aa5;
+
+}
+
+iframe{
+
+display:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<div id="depart">
+
+<h1>🎁 Surprise 🎁</h1>
+
+<button onclick="commencer()">
+
+Clique ici 
+
+</button>
+
+</div>
+
+<div id="anniv" class="hidden">
+
+<h1>
+
+🎉 Happy Birthday 🎉
+
+</h1>
+
+<div class="cake" id="cake">
+
+<div class="candle c1">
+
+<div class="flame">🔥</div>
+
+</div>
+
+<div class="candle c2">
+
+<div class="flame">🔥</div>
+
+</div>
+
+<div class="candle c3">
+
+<div class="flame">🔥</div>
+
+</div>
+
+<div class="candle c4">
+
+<div class="flame">🔥</div>
+
+</div>
+
+<div class="layer top"></div>
+
+<div class="icing"></div>
+
+<div class="layer bottom"></div>
+
+</div>
+
+<p>
+
+ Souffle près du micro
+
+</p>
+
+<p id="etat">
+
+Activation du micro...
+
+</p>
+
+</div>
+
+<iframe
+id="youtube"
+allow="autoplay"
+width="0"
+height="0">
+</iframe>
+
+</div>
+
+<script>
+
+function commencer(){
+
+document
+.getElementById("depart")
+.classList.add("hidden")
+
+document
+.getElementById("anniv")
+.classList.remove("hidden")
+
+document
+.getElementById("youtube")
+.src=
+
+"https://www.youtube.com/embed/GZ5cOiqr5xA?autoplay=1"
+
+micro()
+
+}
+
+async function micro(){
+
+try{
+
+const stream=
+
+await navigator
+.mediaDevices
+.getUserMedia({
+
+audio:true
+
+})
+
+document
+.getElementById("etat")
+.innerHTML=
+
+"Souffle maintenant 🎂"
+
+const context=
+
+new AudioContext()
+
+const source=
+
+context
+.createMediaStreamSource(stream)
+
+const analyser=
+
+context
+.createAnalyser()
+
+source.connect(analyser)
+
+const data=
+
+new Uint8Array(
+analyser.frequencyBinCount
+)
+
+function detect(){
+
+analyser
+.getByteFrequencyData(data)
+
+let volume=
+
+data.reduce(
+
+(a,b)=>a+b
+
+)/data.length
+
+if(volume>45){
+
+document
+.getElementById("cake")
+.classList.add("off")
+
+document
+.getElementById("etat")
+.innerHTML=
+
+"✨ Bougies éteintes ✨"
+
+stream
+.getTracks()
+.forEach(
+
+track=>track.stop()
+
+)
+
+return
+
+}
+
+requestAnimationFrame(
+detect
+)
+
+}
+
+detect()
+
+}
+
+catch{
+
+document
+.getElementById("etat")
+.innerHTML=
+
+"Autorise le micro"
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
