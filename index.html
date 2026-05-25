@@ -11,8 +11,8 @@
 
 body{
 margin:0;
-background:#f8dce9;
-font-family:Arial;
+background:#f5dce6;
+font-family:Arial,sans-serif;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -22,31 +22,35 @@ min-height:100vh;
 .card{
 
 background:white;
-padding:40px;
-border-radius:30px;
 width:850px;
 max-width:90%;
+padding:50px;
+border-radius:35px;
 text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 
 }
 
 h1{
 
-color:#ff5aa5;
-font-size:55px;
+font-size:60px;
+color:#ff4e97;
 
 }
 
 button{
 
-background:#ff5aa5;
-color:white;
 border:none;
-padding:18px 35px;
-border-radius:35px;
-font-size:22px;
+padding:16px 35px;
+border-radius:40px;
+background:#ff5aa5;
+
+color:white;
+font-size:20px;
+
 cursor:pointer;
+margin:10px;
 
 }
 
@@ -59,57 +63,101 @@ display:none;
 .cake{
 
 position:relative;
-width:280px;
-height:260px;
+
+width:320px;
+height:280px;
+
 margin:auto;
 
 }
 
-.layer{
+.layer1{
 
 position:absolute;
-background:#ffe5cc;
-border:4px solid #ffb6d9;
+
+bottom:0;
+
+left:35px;
+
+width:250px;
+height:90px;
+
+background:#ffe6ef;
+
+border-radius:0 0 25px 25px;
+
+border:5px solid #ffbdd9;
+
+}
+
+.layer2{
+
+position:absolute;
+
+bottom:80px;
+
+left:55px;
+
+width:210px;
+height:70px;
+
+background:#fff4f8;
+
+border-radius:15px;
+
+border:5px solid #ffbdd9;
 
 }
 
 .top{
 
-width:220px;
-height:70px;
+position:absolute;
 
-bottom:90px;
-left:30px;
+bottom:140px;
+
+left:75px;
+
+width:170px;
+height:45px;
+
+background:#ff9cc6;
 
 border-radius:50%;
 
 }
 
-.bottom{
-
-width:220px;
-height:100px;
-
-bottom:0;
-left:30px;
-
-border-radius:0 0 25px 25px;
-
-}
-
-.icing{
+.drip{
 
 position:absolute;
 
-width:230px;
+background:#ff9cc6;
+
+width:16px;
+border-radius:0 0 15px 15px;
+
+}
+
+.d1{
+
+left:95px;
+height:30px;
+bottom:120px;
+
+}
+
+.d2{
+
+left:145px;
+height:45px;
+bottom:110px;
+
+}
+
+.d3{
+
+left:205px;
 height:35px;
-
-background:#ff91c4;
-
-bottom:85px;
-left:25px;
-
-border-radius:50%;
+bottom:118px;
 
 }
 
@@ -118,39 +166,32 @@ border-radius:50%;
 position:absolute;
 
 width:14px;
-height:60px;
+height:70px;
 
 bottom:150px;
 
-border-radius:5px;
+border-radius:6px;
 
 }
 
 .c1{
 
-left:55px;
-background:#ff70a6;
+left:105px;
+background:#ff72a9;
 
 }
 
 .c2{
 
-left:105px;
-background:#ffd000;
+left:153px;
+background:#ffd34d;
 
 }
 
 .c3{
 
-left:155px;
-background:#52d6ff;
-
-}
-
-.c4{
-
-left:205px;
-background:#8d5cff;
+left:201px;
+background:#8ad9ff;
 
 }
 
@@ -158,28 +199,30 @@ background:#8d5cff;
 
 position:absolute;
 
-top:-22px;
+top:-28px;
 left:-2px;
 
-font-size:24px;
+width:18px;
+height:28px;
 
-animation:flame 0.3s infinite alternate;
+background:
 
-}
+radial-gradient(
+circle,
+#fff 15%,
+#ffd44d 45%,
+#ff8a00 75%
+);
 
-@keyframes flame{
+border-radius:
 
-from{
+50% 50%
+50% 50%;
 
-transform:scale(1);
+animation:
 
-}
-
-to{
-
-transform:scale(1.15);
-
-}
+fire .25s
+infinite alternate;
 
 }
 
@@ -189,10 +232,34 @@ display:none;
 
 }
 
+@keyframes fire{
+
+from{
+
+transform:
+
+scale(1)
+
+}
+
+to{
+
+transform:
+
+scale(1.15)
+
+rotate(-3deg)
+
+}
+
+}
+
 #etat{
 
 font-size:20px;
-color:#ff5aa5;
+color:#ff4e97;
+
+margin-top:15px;
 
 }
 
@@ -212,95 +279,112 @@ display:none;
 
 <div id="depart">
 
-<h1>🎁 Surprise 🎁</h1>
+<h1>
+
+Happy Birthday
+
+</h1>
 
 <button onclick="commencer()">
 
-Clique ici 
+Clique ici
 
 </button>
 
 </div>
 
-<div id="anniv" class="hidden">
+<div
+id="anniv"
+class="hidden">
 
 <h1>
 
-🎉 Happy Birthday 🎉
+Happy Birthday
 
 </h1>
 
-<div class="cake" id="cake">
+<div
+id="cake"
+class="cake">
 
 <div class="candle c1">
 
-<div class="flame">🔥</div>
+<div class="flame"></div>
 
 </div>
 
 <div class="candle c2">
 
-<div class="flame">🔥</div>
+<div class="flame"></div>
 
 </div>
 
 <div class="candle c3">
 
-<div class="flame">🔥</div>
+<div class="flame"></div>
 
 </div>
 
-<div class="candle c4">
+<div class="top"></div>
 
-<div class="flame">🔥</div>
+<div class="drip d1"></div>
+
+<div class="drip d2"></div>
+
+<div class="drip d3"></div>
+
+<div class="layer2"></div>
+
+<div class="layer1"></div>
 
 </div>
-
-<div class="layer top"></div>
-
-<div class="icing"></div>
-
-<div class="layer bottom"></div>
-
-</div>
-
-<p>
-
- Souffle près du micro
-
-</p>
 
 <p id="etat">
 
-Activation du micro...
+Autorise le micro
 
 </p>
+
+<button
+onclick="rallumer()">
+
+Rallumer les bougies
+
+</button>
 
 </div>
 
 <iframe
 id="youtube"
-allow="autoplay"
-width="0"
-height="0">
+allow="autoplay">
 </iframe>
 
 </div>
 
 <script>
 
+let stream
+
 function commencer(){
 
 document
-.getElementById("depart")
-.classList.add("hidden")
+.getElementById(
+"depart"
+)
+.classList
+.add("hidden")
 
 document
-.getElementById("anniv")
-.classList.remove("hidden")
+.getElementById(
+"anniv"
+)
+.classList
+.remove("hidden")
 
 document
-.getElementById("youtube")
+.getElementById(
+"youtube"
+)
 .src=
 
 "https://www.youtube.com/embed/GZ5cOiqr5xA?autoplay=1"
@@ -309,25 +393,44 @@ micro()
 
 }
 
+function rallumer(){
+
+document
+.getElementById(
+"cake"
+)
+.classList
+.remove("off")
+
+document
+.getElementById(
+"etat"
+)
+.innerHTML=
+
+"Souffle"
+
+}
+
 async function micro(){
 
 try{
 
-const stream=
+stream=
 
 await navigator
 .mediaDevices
 .getUserMedia({
-
 audio:true
-
 })
 
 document
-.getElementById("etat")
+.getElementById(
+"etat"
+)
 .innerHTML=
 
-"Souffle maintenant 🎂"
+"Souffle"
 
 const context=
 
@@ -336,14 +439,19 @@ new AudioContext()
 const source=
 
 context
-.createMediaStreamSource(stream)
+.createMediaStreamSource(
+stream
+)
 
 const analyser=
 
 context
 .createAnalyser()
 
-source.connect(analyser)
+source
+.connect(
+analyser
+)
 
 const data=
 
@@ -354,37 +462,33 @@ analyser.frequencyBinCount
 function detect(){
 
 analyser
-.getByteFrequencyData(data)
+.getByteFrequencyData(
+data
+)
 
 let volume=
 
 data.reduce(
-
 (a,b)=>a+b
+)
+/data.length
 
-)/data.length
-
-if(volume>45){
-
-document
-.getElementById("cake")
-.classList.add("off")
+if(volume>42){
 
 document
-.getElementById("etat")
+.getElementById(
+"cake"
+)
+.classList
+.add("off")
+
+document
+.getElementById(
+"etat"
+)
 .innerHTML=
 
-"✨ Bougies éteintes ✨"
-
-stream
-.getTracks()
-.forEach(
-
-track=>track.stop()
-
-)
-
-return
+"Bougies éteintes"
 
 }
 
@@ -401,10 +505,12 @@ detect()
 catch{
 
 document
-.getElementById("etat")
+.getElementById(
+"etat"
+)
 .innerHTML=
 
-"Autorise le micro"
+"Micro refusé"
 
 }
 
