@@ -1,242 +1,746 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sweet 28, my angel.</title>
+
+<meta
+name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>
+Sweet 28, my angel.
+</title>
 
 <style>
+
 *{
-  box-sizing:border-box;
-  font-family:"Trebuchet MS",sans-serif;
+
+box-sizing:border-box;
+
+font-family:
+
+"Trebuchet MS",
+sans-serif;
+
 }
 
 body{
-  margin:0;
-  min-height:100vh;
-  padding:20px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:linear-gradient(135deg,#F7CAC9,#F6EEF3,#91A8D0);
+
+margin:0;
+
+min-height:100vh;
+
+padding:20px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:
+
+linear-gradient(
+135deg,
+#F7CAC9,
+#F5EBF2,
+#91A8D0
+);
+
 }
 
 .card{
-  width:900px;
-  max-width:95%;
-  padding:50px 35px;
-  text-align:center;
-  border-radius:42px;
-  background:rgba(255,255,255,.58);
-  backdrop-filter:blur(15px);
-  border:2px solid rgba(255,255,255,.7);
-  box-shadow:0 18px 45px rgba(145,168,208,.22);
+
+width:900px;
+
+max-width:95%;
+
+padding:50px 35px;
+
+background:
+
+rgba(
+255,
+255,
+255,
+0.58
+);
+
+backdrop-filter:
+
+blur(15px);
+
+border:
+
+2px solid
+rgba(
+255,
+255,
+255,
+0.7
+);
+
+border-radius:40px;
+
+box-shadow:
+
+0 18px 45px
+rgba(
+145,
+168,
+208,
+0.20
+);
+
+text-align:center;
+
 }
 
 h1{
-  margin:0 0 25px;
-  font-size:44px;
-  font-weight:500;
-  color:#5F82B4;
-  white-space:nowrap;
+
+margin:0 0 25px;
+
+font-size:44px;
+
+font-weight:500;
+
+color:#5F82B4;
+
 }
 
 button{
-  border:none;
-  padding:16px 42px;
-  border-radius:40px;
-  font-size:18px;
-  cursor:pointer;
-  color:white;
-  background:linear-gradient(135deg,#F7CAC9,#91A8D0);
-  box-shadow:0 8px 22px rgba(145,168,208,.25);
+
+border:none;
+
+padding:
+
+16px 42px;
+
+border-radius:40px;
+
+font-size:18px;
+
+cursor:pointer;
+
+color:white;
+
+background:
+
+linear-gradient(
+135deg,
+#F7CAC9,
+#91A8D0
+);
+
+box-shadow:
+
+0 8px 22px
+rgba(
+145,
+168,
+208,
+0.25
+);
+
+transition:.25s;
+
+}
+
+button:hover{
+
+transform:
+
+translateY(-2px);
+
 }
 
 .hidden{
-  display:none;
+
+display:none;
+
 }
 
 .cake-wrap{
-  display:flex;
-  justify-content:center;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+width:100%;
+
 }
 
 svg{
-  width:540px;
-  max-width:100%;
-  display:block;
+
+width:540px;
+
+max-width:100%;
+
+display:block;
+
 }
 
 .flame{
-  animation:glow .8s infinite alternate;
+
+animation:
+
+glow .8s
+infinite alternate;
+
 }
 
 @keyframes glow{
-  from{ opacity:.78; }
-  to{ opacity:1; }
+
+from{
+
+opacity:.8;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
 }
 
 .off .flame{
-  display:none;
+
+display:none;
+
 }
 
 #etat{
-  font-size:18px;
-  margin:18px 0;
-  color:#5F82B4;
+
+margin:20px 0;
+
+font-size:18px;
+
+color:#5F82B4;
+
 }
 
 iframe{
-  display:none;
+
+display:none;
+
 }
+
+/* téléphone */
+
+@media(max-width:700px){
+
+.card{
+
+padding:30px 15px;
+
+border-radius:28px;
+
+}
+
+h1{
+
+font-size:30px;
+
+line-height:1.2;
+
+}
+
+svg{
+
+max-width:330px;
+
+}
+
+button{
+
+width:220px;
+
+max-width:90%;
+
+padding:14px 25px;
+
+font-size:16px;
+
+}
+
+#etat{
+
+font-size:16px;
+
+}
+
+}
+
+@media(max-width:420px){
+
+h1{
+
+font-size:26px;
+
+}
+
+svg{
+
+max-width:280px;
+
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
 <div class="card">
 
-  <div id="depart">
-    <h1>Sweet 28, my angel.</h1>
-    <button onclick="commencer()">for you</button>
-  </div>
+<div id="depart">
 
-  <div id="anniv" class="hidden">
-    <h1>Sweet 28, my angel.</h1>
+<h1>
 
-    <div class="cake-wrap">
-      <svg id="cake" viewBox="0 0 540 430">
+Sweet 28, my angel.
 
-        <!-- bougies -->
-        <rect x="197" y="70" width="18" height="78" rx="9" fill="#F7CAC9"/>
-        <path class="flame" d="M206 33 C190 58 197 77 206 77 C215 77 222 58 206 33Z" fill="#FFD76B"/>
-        <path class="flame" d="M206 51 C200 62 203 70 206 70 C209 70 212 62 206 51Z" fill="#FFF8D8"/>
+</h1>
 
-        <rect x="261" y="70" width="18" height="78" rx="9" fill="#91A8D0"/>
-        <path class="flame" d="M270 33 C254 58 261 77 270 77 C279 77 286 58 270 33Z" fill="#FFD76B"/>
-        <path class="flame" d="M270 51 C264 62 267 70 270 70 C273 70 276 62 270 51Z" fill="#FFF8D8"/>
+<button
+onclick="commencer()">
 
-        <rect x="325" y="70" width="18" height="78" rx="9" fill="#F7CAC9"/>
-        <path class="flame" d="M334 33 C318 58 325 77 334 77 C343 77 350 58 334 33Z" fill="#FFD76B"/>
-        <path class="flame" d="M334 51 C328 62 331 70 334 70 C337 70 340 62 334 51Z" fill="#FFF8D8"/>
+for you
 
-        <!-- étage haut : dessus -->
-        <ellipse cx="270" cy="165" rx="130" ry="42"
-          fill="#FFF9F8" stroke="#B8C9E9" stroke-width="4"/>
+</button>
 
-        <!-- étage haut : face -->
-        <path d="M140 165
-                 L140 250
-                 Q140 278 168 278
-                 H372
-                 Q400 278 400 250
-                 L400 165"
-          fill="#FFF9F8" stroke="#B8C9E9" stroke-width="4"/>
+</div>
 
-        <!-- déco haut -->
-        <path d="M155 218
-                 Q178 248 205 218
-                 Q232 248 260 218
-                 Q288 248 315 218
-                 Q342 248 385 218"
-          fill="none" stroke="#91A8D0" stroke-width="3"/>
+<div
+id="anniv"
+class="hidden">
 
-        <circle cx="155" cy="218" r="7" fill="#F7CAC9"/>
-        <circle cx="205" cy="218" r="7" fill="#91A8D0"/>
-        <circle cx="260" cy="218" r="7" fill="#F7CAC9"/>
-        <circle cx="315" cy="218" r="7" fill="#91A8D0"/>
-        <circle cx="385" cy="218" r="7" fill="#F7CAC9"/>
+<h1>
 
-        <!-- étage bas : dessus -->
-        <ellipse cx="270" cy="290" rx="190" ry="58"
-          fill="#FFF9F8" stroke="#F3B4CA" stroke-width="4"/>
+Sweet 28, my angel.
 
-        <!-- étage bas : face -->
-        <path d="M80 290
-                 L80 365
-                 Q80 405 120 405
-                 H420
-                 Q460 405 460 365
-                 L460 290"
-          fill="#FFF9F8" stroke="#F3B4CA" stroke-width="4"/>
+</h1>
 
-        <!-- déco bas -->
-        <path d="M100 340
-                 Q128 378 160 340
-                 Q192 378 225 340
-                 Q257 378 290 340
-                 Q322 378 355 340
-                 Q388 378 440 340"
-          fill="none" stroke="#91A8D0" stroke-width="3"/>
+<div class="cake-wrap">
 
-        <circle cx="100" cy="340" r="8" fill="#F7CAC9"/>
-        <circle cx="160" cy="340" r="8" fill="#91A8D0"/>
-        <circle cx="225" cy="340" r="8" fill="#F7CAC9"/>
-        <circle cx="290" cy="340" r="8" fill="#91A8D0"/>
-        <circle cx="355" cy="340" r="8" fill="#F7CAC9"/>
-        <circle cx="440" cy="340" r="8" fill="#91A8D0"/>
+<svg
+id="cake"
+viewBox="0 0 540 430">
 
-        <!-- assiette -->
-        <ellipse cx="270" cy="402" rx="210" ry="30"
-          fill="#F8C9D4" stroke="#F2B1C3" stroke-width="4"/>
+<!-- bougies -->
 
-      </svg>
-    </div>
+<rect
+x="197"
+y="70"
+width="18"
+height="78"
+rx="9"
+fill="#F7CAC9"/>
 
-    <p id="etat">allow microphone</p>
-    <button onclick="rallumer()">light candles</button>
-  </div>
+<path
+class="flame"
+d="
+M206 33
+C190 58
+197 77
+206 77
+C215 77
+222 58
+206 33Z"
 
-  <iframe id="youtube" allow="autoplay"></iframe>
+fill="#FFD76B"/>
+
+<path
+class="flame"
+d="
+M206 51
+C200 62
+203 70
+206 70
+C209 70
+212 62
+206 51Z"
+
+fill="#FFF8D8"/>
+
+<rect
+x="261"
+y="70"
+width="18"
+height="78"
+rx="9"
+fill="#91A8D0"/>
+
+<path
+class="flame"
+d="
+M270 33
+C254 58
+261 77
+270 77
+C279 77
+286 58
+270 33Z"
+
+fill="#FFD76B"/>
+
+<path
+class="flame"
+d="
+M270 51
+C264 62
+267 70
+270 70
+C273 70
+276 62
+270 51Z"
+
+fill="#FFF8D8"/>
+
+<rect
+x="325"
+y="70"
+width="18"
+height="78"
+rx="9"
+fill="#F7CAC9"/>
+
+<path
+class="flame"
+d="
+M334 33
+C318 58
+325 77
+334 77
+C343 77
+350 58
+334 33Z"
+
+fill="#FFD76B"/>
+
+<path
+class="flame"
+d="
+M334 51
+C328 62
+331 70
+334 70
+C337 70
+340 62
+334 51Z"
+
+fill="#FFF8D8"/>
+
+<!-- étage haut -->
+
+<ellipse
+
+cx="270"
+cy="165"
+
+rx="130"
+ry="42"
+
+fill="#FFF9F8"
+
+stroke="#B8C9E9"
+
+stroke-width="4"/>
+
+<path
+
+d="
+M140 165
+L140 250
+
+Q140 278
+168 278
+
+H372
+
+Q400 278
+400 250
+
+L400 165"
+
+fill="#FFF9F8"
+
+stroke="#B8C9E9"
+
+stroke-width="4"/>
+
+<!-- déco haut -->
+
+<path
+
+d="
+M155 218
+
+Q178 248 205 218
+
+Q232 248 260 218
+
+Q288 248 315 218
+
+Q342 248 385 218"
+
+fill="none"
+
+stroke="#91A8D0"
+
+stroke-width="3"/>
+
+<circle cx="155" cy="218" r="7" fill="#F7CAC9"/>
+<circle cx="205" cy="218" r="7" fill="#91A8D0"/>
+<circle cx="260" cy="218" r="7" fill="#F7CAC9"/>
+<circle cx="315" cy="218" r="7" fill="#91A8D0"/>
+<circle cx="385" cy="218" r="7" fill="#F7CAC9"/>
+
+<!-- étage bas -->
+
+<ellipse
+
+cx="270"
+
+cy="290"
+
+rx="190"
+
+ry="58"
+
+fill="#FFF9F8"
+
+stroke="#F3B4CA"
+
+stroke-width="4"/>
+
+<path
+
+d="
+M80 290
+
+L80 365
+
+Q80 405
+120 405
+
+H420
+
+Q460 405
+460 365
+
+L460 290"
+
+fill="#FFF9F8"
+
+stroke="#F3B4CA"
+
+stroke-width="4"/>
+
+<!-- déco bas -->
+
+<path
+
+d="
+M100 340
+
+Q128 378 160 340
+
+Q192 378 225 340
+
+Q257 378 290 340
+
+Q322 378 355 340
+
+Q388 378 440 340"
+
+fill="none"
+
+stroke="#91A8D0"
+
+stroke-width="3"/>
+
+<circle cx="100" cy="340" r="8" fill="#F7CAC9"/>
+<circle cx="160" cy="340" r="8" fill="#91A8D0"/>
+<circle cx="225" cy="340" r="8" fill="#F7CAC9"/>
+<circle cx="290" cy="340" r="8" fill="#91A8D0"/>
+<circle cx="355" cy="340" r="8" fill="#F7CAC9"/>
+<circle cx="440" cy="340" r="8" fill="#91A8D0"/>
+
+<!-- assiette -->
+
+<ellipse
+
+cx="270"
+
+cy="402"
+
+rx="210"
+
+ry="30"
+
+fill="#F8C9D4"
+
+stroke="#F2B1C3"
+
+stroke-width="4"/>
+
+</svg>
+
+</div>
+
+<p id="etat">
+
+allow microphone
+
+</p>
+
+<button
+onclick="rallumer()">
+
+light candles
+
+</button>
+
+</div>
+
+<iframe
+id="youtube"
+allow="autoplay">
+</iframe>
 
 </div>
 
 <script>
+
 function commencer(){
-  depart.classList.add("hidden");
-  anniv.classList.remove("hidden");
-  youtube.src = "https://www.youtube.com/embed/GZ5cOiqr5xA?autoplay=1";
-  micro();
+
+depart.classList.add(
+"hidden"
+)
+
+anniv.classList.remove(
+"hidden"
+)
+
+youtube.src=
+
+"https://www.youtube.com/embed/GZ5cOiqr5xA?autoplay=1"
+
+micro()
+
 }
 
 function rallumer(){
-  cake.classList.remove("off");
-  etat.innerHTML = "blow";
+
+cake.classList.remove(
+"off"
+)
+
+etat.innerHTML=
+
+"blow"
+
 }
 
 async function micro(){
-  try{
-    const stream = await navigator.mediaDevices.getUserMedia({ audio:true });
-    etat.innerHTML = "blow";
 
-    const context = new AudioContext();
-    const source = context.createMediaStreamSource(stream);
-    const analyser = context.createAnalyser();
+try{
 
-    source.connect(analyser);
+const stream=
 
-    const data = new Uint8Array(analyser.frequencyBinCount);
+await navigator
+.mediaDevices
+.getUserMedia({
 
-    function detect(){
-      analyser.getByteFrequencyData(data);
+audio:true
 
-      let volume = data.reduce((a,b)=>a+b) / data.length;
+})
 
-      if(volume > 40){
-        cake.classList.add("off");
-        etat.innerHTML = "candles out";
-      }
+etat.innerHTML=
 
-      requestAnimationFrame(detect);
-    }
+"blow"
 
-    detect();
+const context=
 
-  }catch{
-    etat.innerHTML = "microphone blocked";
-  }
+new AudioContext()
+
+const source=
+
+context
+.createMediaStreamSource(
+stream
+)
+
+const analyser=
+
+context
+.createAnalyser()
+
+source.connect(
+analyser
+)
+
+const data=
+
+new Uint8Array(
+analyser.frequencyBinCount
+)
+
+function detect(){
+
+analyser.getByteFrequencyData(
+data
+)
+
+let volume=
+
+data.reduce(
+(a,b)=>a+b
+)
+/data.length
+
+if(volume>22){
+
+cake.classList.add(
+"off"
+)
+
+etat.innerHTML=
+
+"candles out"
+
 }
+
+requestAnimationFrame(
+detect
+)
+
+}
+
+detect()
+
+}
+
+catch{
+
+etat.innerHTML=
+
+"microphone blocked"
+
+}
+
+}
+
 </script>
 
 </body>
+
 </html>
