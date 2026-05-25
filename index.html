@@ -6,9 +6,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Happy Birthday</title>
+<title>Sweet 28, my angel.</title>
 
 <style>
+
+*{
+font-family:
+'Helvetica Neue',
+Arial,
+sans-serif;
+box-sizing:border-box;
+}
 
 body{
 
@@ -19,19 +27,12 @@ background:
 linear-gradient(
 135deg,
 #F7CAC9 0%,
-#EDD9E5 45%,
+#EFDDE8 45%,
 #91A8D0 100%
 );
 
-font-family:
-
-'Segoe UI',
-sans-serif;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
 
 min-height:100vh;
@@ -43,9 +44,7 @@ min-height:100vh;
 width:850px;
 max-width:90%;
 
-padding:55px;
-
-border-radius:38px;
+padding:60px;
 
 background:
 
@@ -53,12 +52,14 @@ rgba(
 255,
 255,
 255,
-0.75
+0.72
 );
 
 backdrop-filter:
 
-blur(12px);
+blur(15px);
+
+border-radius:40px;
 
 box-shadow:
 
@@ -76,35 +77,15 @@ text-align:center;
 
 h1{
 
-font-size:58px;
+font-size:54px;
 
-margin-bottom:10px;
+font-weight:500;
 
-background:
+color:#6F83A8;
 
-linear-gradient(
-90deg,
-#F7CAC9,
-#91A8D0
-);
+letter-spacing:1px;
 
--webkit-background-clip:text;
-
-color:transparent;
-
-letter-spacing:2px;
-
-}
-
-.subtitle{
-
-font-size:20px;
-
-font-style:italic;
-
-color:#6E84A8;
-
-margin-bottom:30px;
+margin-bottom:45px;
 
 }
 
@@ -113,10 +94,9 @@ button{
 border:none;
 
 padding:
+16px 38px;
 
-16px 35px;
-
-border-radius:35px;
+border-radius:40px;
 
 cursor:pointer;
 
@@ -132,9 +112,11 @@ linear-gradient(
 
 color:white;
 
+transition:.25s;
+
 box-shadow:
 
-0 8px 20px
+0 8px 22px
 rgba(
 145,
 168,
@@ -142,16 +124,11 @@ rgba(
 0.25
 );
 
-transition:.3s;
-
-margin:10px;
-
 }
 
 button:hover{
 
 transform:
-
 translateY(-2px);
 
 }
@@ -166,49 +143,49 @@ display:none;
 
 position:relative;
 
-width:330px;
+width:340px;
 height:280px;
 
 margin:auto;
 
 }
 
-.layer1{
+.layer-bottom{
 
 position:absolute;
 
 bottom:0;
 
-left:35px;
+left:45px;
 
-width:260px;
-height:100px;
+width:250px;
+height:95px;
 
 background:
 
-#FFF7FA;
+#FFF8FA;
 
 border:
 
-5px solid
-#D9C7E7;
+4px solid
+#DCCEE7;
 
 border-radius:
 
-0 0 30px 30px;
+0 0 28px 28px;
 
 }
 
-.layer2{
+.layer-top{
 
 position:absolute;
 
-bottom:80px;
+bottom:82px;
 
-left:55px;
+left:70px;
 
-width:220px;
-height:75px;
+width:200px;
+height:70px;
 
 background:
 
@@ -216,23 +193,23 @@ background:
 
 border:
 
-5px solid
-#BDD2EA;
+4px solid
+#C5D4EC;
 
-border-radius:20px;
+border-radius:18px;
 
 }
 
-.top{
+.cream{
 
 position:absolute;
 
 bottom:145px;
 
-left:70px;
+left:75px;
 
 width:190px;
-height:50px;
+height:42px;
 
 background:
 
@@ -250,9 +227,11 @@ border-radius:50%;
 
 position:absolute;
 
-background:#F7CAC9;
+background:
 
-width:18px;
+#F7CAC9;
+
+width:16px;
 
 border-radius:
 
@@ -262,7 +241,27 @@ border-radius:
 
 .d1{
 
-left:95px;
+left:105px;
+
+bottom:118px;
+
+height:30px;
+
+}
+
+.d2{
+
+left:160px;
+
+bottom:105px;
+
+height:48px;
+
+}
+
+.d3{
+
+left:215px;
 
 bottom:120px;
 
@@ -270,34 +269,14 @@ height:32px;
 
 }
 
-.d2{
-
-left:150px;
-
-bottom:110px;
-
-height:45px;
-
-}
-
-.d3{
-
-left:205px;
-
-bottom:120px;
-
-height:30px;
-
-}
-
 .candle{
 
 position:absolute;
 
+bottom:155px;
+
 width:14px;
 height:70px;
-
-bottom:155px;
 
 border-radius:6px;
 
@@ -305,7 +284,7 @@ border-radius:6px;
 
 .c1{
 
-left:110px;
+left:120px;
 
 background:#F7CAC9;
 
@@ -313,7 +292,7 @@ background:#F7CAC9;
 
 .c2{
 
-left:155px;
+left:160px;
 
 background:#91A8D0;
 
@@ -323,7 +302,7 @@ background:#91A8D0;
 
 left:200px;
 
-background:#D9BEEB;
+background:#D8BFE7;
 
 }
 
@@ -342,40 +321,17 @@ background:
 
 radial-gradient(
 circle,
-#FFFBEA 15%,
-#FFD76A 50%,
-#FF9650 80%
+#FFFDEA 15%,
+#FFD56B 50%,
+#FF9D52 80%
 );
 
-border-radius:
-
-50%;
+border-radius:50%;
 
 animation:
 
-fire .25s infinite alternate;
-
-}
-
-@keyframes fire{
-
-from{
-
-transform:
-
-scale(1)
-
-}
-
-to{
-
-transform:
-
-scale(1.12)
-
-rotate(-3deg)
-
-}
+fire .25s
+infinite alternate;
 
 }
 
@@ -385,13 +341,32 @@ display:none;
 
 }
 
+@keyframes fire{
+
+from{
+
+transform:
+scale(1);
+
+}
+
+to{
+
+transform:
+scale(1.12)
+rotate(-3deg);
+
+}
+
+}
+
 #etat{
 
+margin-top:25px;
+
+color:#6F83A8;
+
 font-size:18px;
-
-color:#6E84A8;
-
-margin-top:20px;
 
 }
 
@@ -413,20 +388,14 @@ display:none;
 
 <h1>
 
-Happy Birthday
+Sweet 28, my angel.
 
 </h1>
-
-<p class="subtitle">
-
-my angel
-
-</p>
 
 <button
 onclick="commencer()">
 
-open
+for you
 
 </button>
 
@@ -438,19 +407,13 @@ class="hidden">
 
 <h1>
 
-Happy Birthday
+Sweet 28, my angel.
 
 </h1>
 
-<p class="subtitle">
-
-my angel
-
-</p>
-
 <div
-id="cake"
-class="cake">
+class="cake"
+id="cake">
 
 <div class="candle c1">
 
@@ -470,7 +433,7 @@ class="cake">
 
 </div>
 
-<div class="top"></div>
+<div class="cream"></div>
 
 <div class="drip d1"></div>
 
@@ -478,9 +441,9 @@ class="cake">
 
 <div class="drip d3"></div>
 
-<div class="layer2"></div>
+<div class="layer-top"></div>
 
-<div class="layer1"></div>
+<div class="layer-bottom"></div>
 
 </div>
 
@@ -507,8 +470,6 @@ allow="autoplay">
 </div>
 
 <script>
-
-let stream
 
 function commencer(){
 
@@ -567,7 +528,7 @@ async function micro(){
 
 try{
 
-stream=
+const stream=
 
 await navigator
 .mediaDevices
@@ -674,4 +635,5 @@ document
 </script>
 
 </body>
+
 </html>
